@@ -1,0 +1,8 @@
+#ifndef INCLUDE_SIGNALIZING_CONV2D_CORE
+#define INCLUDE_SIGNALIZING_CONV2D_CORE
+
+namespace signalizing::conv2d::core {
+
+}
+
+#endif /* INCLUDE_SIGNALIZING_CONV2D_CORE */
