@@ -1,7 +1,9 @@
 ﻿---
+BasedOnStyle: Mozilla
 AlignAfterOpenBracket: Align
 AlignConsecutiveMacros: 'true'
 AlignConsecutiveAssignments: 'true'
+AlignConsecutiveDeclarations: 'true'
 AlignEscapedNewlines: Left
 AlignOperands: 'true'
 AlignTrailingComments: 'true'
@@ -13,12 +15,15 @@ AllowShortLambdasOnASingleLine: Inline
 AllowShortLoopsOnASingleLine: 'false'
 AlwaysBreakAfterReturnType: None
 AlwaysBreakBeforeMultilineStrings: 'false'
-BinPackArguments: 'true'
-BinPackParameters: 'true'
+AlwaysBreakTemplateDeclarations: 'true'
+ExperimentalAutoDetectBinPacking: false
+AllowAllParametersOfDeclarationOnNextLine: true
 BreakBeforeBinaryOperators: NonAssignment
-BreakBeforeBraces: Linux
+BreakBeforeBraces: Custom
 BreakBeforeTernaryOperators: 'false'
 ColumnLimit: '100'
+CompactNamespaces: 'true'
+ConstructorInitializerAllOnOneLineOrOnePerLine: 'true'
 DerivePointerAlignment: 'true'
 DisableFormat: 'false'
 FixNamespaceComments: 'true'
@@ -30,7 +35,6 @@ KeepEmptyLinesAtTheStartOfBlocks: 'true'
 Language: Cpp
 MaxEmptyLinesToKeep: '2'
 NamespaceIndentation: None
-PointerAlignment: Left
 ReflowComments: 'true'
 SortIncludes: 'true'
 SortUsingDeclarations: 'true'
