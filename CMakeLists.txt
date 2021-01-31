@@ -36,8 +36,16 @@ endif()
 # The compiled library code is here
 add_subdirectory(src)
 
-# Testing only available if this is the main app
-# Emergency override MODERN_CMAKE_BUILD_TESTING provided as well
-if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING) AND BUILD_TESTING)
-    add_subdirectory(tests)
+# Testing
+find_library(CATCH2_LIB catch2)
+if (CATCH2_LIB)
+  include(CTest)
+  include(Catch)
+  add_subdirectory(tests)
+elseif (EXISTS ${PROJECT_SOURCE_DIR}/third_party/Catch2)
+  add_subdirectory(third_party/Catch2)
+  include(third_party/Catch2/contrib/Catch.cmake)
+  add_subdirectory(tests)
+else()
+  message("Catch2 not found, disable tests. (global or third_party/Catch2")
 endif()
